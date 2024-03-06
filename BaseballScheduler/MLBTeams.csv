@@ -1,0 +1,31 @@
+Universe,Team,Abbrev,League,Division,Rivals,InterleagueRotation,IntraleagueRotation
+MLB,Chicago White Sox,CWS,AL,Central,CHC,A,B
+MLB,Cleveland Guardians,CLE,AL,Central,CIN,B,A
+MLB,Detroit Tigers,DET,AL,Central,PIT,A,B
+MLB,Kansas City Royals,KC,AL,Central,STL,B,A
+MLB,Minnesota Twins,MIN,AL,Central,MIL,A,B
+MLB,Baltimore Orioles,BAL,AL,East,WAS,B,A
+MLB,Boston Red Sox,BOS,AL,East,ATL,A,B
+MLB,New York Yankees,NYY,AL,East,NYM,B,A
+MLB,Tampa Bay Rays,TB,AL,East,MIA,A,B
+MLB,Toronto Blue Jays,TOR,AL,East,PHI,B,A
+MLB,Houston Astros,HOU,AL,West,COL,A,B
+MLB,Los Angeles Angels,LAA,AL,West,LAD,B,A
+MLB,Oakland Athletics,OAK,AL,West,SF,A,B
+MLB,Seattle Mariners,SEA,AL,West,SD,B,A
+MLB,Texas Rangers,TEX,AL,West,ARI,A,B
+MLB,Chicago Cubs,CHC,NL,Central,CWS,B,A
+MLB,Cincinnati Reds,CIN,NL,Central,CLE,A,B
+MLB,Milwaukee Brewers,MIL,NL,Central,MIN,B,A
+MLB,St Louis Cardinals,STL,NL,Central,KC,A,B
+MLB,Atlanta Braves,ATL,NL,East,BOS,B,A
+MLB,Miami Marlins,MIA,NL,East,TB,A,B
+MLB,New York Mets,NYM,NL,East,NYY,B,A
+MLB,Philadelphia Phillies,PHI,NL,East,TOR,A,B
+MLB,Pittsburgh Pirates,PIT,NL,East,DET,B,A
+MLB,Washington Nationals,WAS,NL,East,BAL,A,B
+MLB,Arizona Diamondbacks,ARI,NL,West,TEX,B,A
+MLB,Colorado Rockies,COL,NL,West,HOU,A,B
+MLB,Los Angeles Dodgers,LAD,NL,West,LAA,B,A
+MLB,San Diego Padres,SD,NL,West,SEA,A,B
+MLB,San Francisco Giants,SF,NL,West,OAK,B,A
