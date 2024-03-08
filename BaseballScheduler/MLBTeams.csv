@@ -17,12 +17,12 @@ MLB,Texas Rangers,TEX,AL,West,ARI,A,B,E,D,A
 MLB,Chicago Cubs,CHC,NL,Central,CWS,B,B,A,E,B
 MLB,Cincinnati Reds,CIN,NL,Central,CLE,A,B,B,A,C
 MLB,Milwaukee Brewers,MIL,NL,Central,MIN,B,B,C,B,D
-MLB,St Louis Cardinals,STL,NL,Central,KC,A,B,D,C,E
-MLB,Atlanta Braves,ATL,NL,East,BOS,B,B,E,D,A
-MLB,Miami Marlins,MIA,NL,East,TB,A,A,A,E,B
-MLB,New York Mets,NYM,NL,East,NYY,B,B,B,A,C
-MLB,Philadelphia Phillies,PHI,NL,East,TOR,A,A,C,B,D
-MLB,Pittsburgh Pirates,PIT,NL,East,DET,B,B,D,C,E
+MLB,Pittsburgh Pirates,PIT,NL,Central,DET,A,B,D,C,E
+MLB,St Louis Cardinals,STL,NL,Central,KC,B,B,E,D,A
+MLB,Atlanta Braves,ATL,NL,East,BOS,A,B,A,E,B
+MLB,Miami Marlins,MIA,NL,East,TB,B,A,B,A,C
+MLB,New York Mets,NYM,NL,East,NYY,A,B,C,B,D
+MLB,Philadelphia Phillies,PHI,NL,East,TOR,B,A,D,C,E
 MLB,Washington Nationals,WAS,NL,East,BAL,A,B,E,D,A
 MLB,Arizona Diamondbacks,ARI,NL,West,TEX,B,A,A,E,B
 MLB,Colorado Rockies,COL,NL,West,HOU,A,A,B,A,C
