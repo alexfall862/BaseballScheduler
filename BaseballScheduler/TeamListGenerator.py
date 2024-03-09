@@ -12,7 +12,7 @@ def FileUploader(directory):
     x = csv.DictReader(open(directory))
     return x
 
-def MatchupGenerator(teamlist, rot, home, away, four, three):
+def MatchupGenerator(teamlist, rot, home, away, four, three, two):
     for team in teamlist:
         gameslist = []
         #Home 7 game division rotation (4,3)
@@ -81,14 +81,12 @@ def MatchupGenerator(teamlist, rot, home, away, four, three):
                     gameslist.append(home+iteam['Abbrev']+three)
                     gameslist.append(away+iteam['Abbrev']+three)
             
-        #4 game rival
+        #4 game rival (2, 2)
         for iteam in teamlist:
             if team['Abbrev'] == iteam['Rivals']:
-                if team['RivalRot'] == rot:
-                    gameslist.append(home+iteam['Abbrev']+four)
-                else: 
-                    gameslist.append(away+iteam['Abbrev']+four)
+                gameslist.append(home+iteam['Abbrev']+two)
+                gameslist.append(away+iteam['Abbrev']+two)
         
         team['ScheduleList'] = gameslist
-        team['SelfList'] = [home+team['Abbrev']+four, away+team['Abbrev']+four, home+team['Abbrev']+three, away+team['Abbrev']+three]
+        team['SelfList'] = [home+team['Abbrev']+four, away+team['Abbrev']+four, home+team['Abbrev']+three, away+team['Abbrev']+three, home+team['Abbrev']+two, away+team['Abbrev']+two]
     return teamlist

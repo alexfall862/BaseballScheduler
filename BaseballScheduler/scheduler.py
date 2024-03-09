@@ -11,19 +11,23 @@ def findmatchinggame(string, list):
         if string in x:
             return x
         else:
+            #print("COULD NOT FIND TEAM")
             pass
+    #return None
 
-def fliphomeaway(home, away, string, oppteam, mteam, four, three, weeklyg, weeklyremoval):
+def fliphomeaway(home, away, string, oppteam, mteam, four, three, two, weeklyg, weeklyremoval):
     if home in string:
         x = away
     else:
         x = home
     if four in string:
         y = f"{x}{oppteam}{four}"
-        weeklyg.append({y, string})
-    else:
+    elif three in string:
         y = f"{x}{oppteam}{three}"
-        weeklyg.append({y, string})        
+    else:
+        y = f"{x}{oppteam}{two}"
+        
+    weeklyg.append({y, string})        
     weeklyremoval.append({mteam: y})
     weeklyremoval.append({oppteam: string})
     z = {oppteam: string}
@@ -37,7 +41,9 @@ def FindAllOpponents(team, teamlist):
     my_item2 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][1])>=1)
     my_item3 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][2])>=1)
     my_item4 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][3])>=1)
-    y = list(chain(my_item1, my_item2, my_item3, my_item4))
+    my_item5 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][4])>=1)
+    my_item6 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][5])>=1)
+    y = list(chain(my_item1, my_item2, my_item3, my_item4, my_item5, my_item6))
     print(f"LIST OF TEAMS TO MATCH: {y}")
     return y
 

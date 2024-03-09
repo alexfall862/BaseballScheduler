@@ -13,12 +13,16 @@ home = "#"
 away = "@"
 four = "4"
 three = "3"
-teamlist = MatchupGenerator(teamlist, rot, home, away, four, three)
+two = "2"
+teamlist = MatchupGenerator(teamlist, rot, home, away, four, three, two)
 wteamlist = teamlist
+
+
 listOfWeeks = []
+
 i=0
-input("Any Key to Run")
-while i<(len(teamlist[0]['ScheduleList'])):
+print(len(teamlist[0]['ScheduleList']))
+while i<52:#len(teamlist[0]['ScheduleList']):
     print(f"###### \nSTARTING WEEK: {i}\n######\n######\n######")
     weekcheck=False
     while weekcheck==False: 
@@ -57,7 +61,7 @@ while i<(len(teamlist[0]['ScheduleList'])):
                     weekcheck=False
                     break
                 oppgamestring = findmatchinggame(b['Abbrev'], a['ScheduleList'])
-                x = fliphomeaway(home, away, oppgamestring, a['Abbrev'], b['Abbrev'], four, three, wSched, weeklyremovals)
+                x = fliphomeaway(home, away, oppgamestring, a['Abbrev'], b['Abbrev'], four, three, two, wSched, weeklyremovals)
                 
                 opp = [d for i, d in enumerate(wteamlist) if a['Abbrev'] in d['Abbrev']][0]
                 star = [d for i, d in enumerate(wteamlist) if b['Abbrev'] in d['Abbrev']][0]
@@ -87,6 +91,7 @@ while i<(len(teamlist[0]['ScheduleList'])):
             listOfWeeks.append(wSched)
             print(f"Schedule: \n{listOfWeeks}\n")
             i+=1
+   
 
 with open('out.csv', 'w', newline='') as f:
     writer = csv.writer(f)
