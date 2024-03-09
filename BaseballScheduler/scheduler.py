@@ -12,26 +12,23 @@ def findmatchinggame(string, list):
             return x
         else:
             pass
-    return None
 
-def fliphomeaway(home, away, string, oppteam, four, three, tlist, olist, weeklyg):
+def fliphomeaway(home, away, string, oppteam, mteam, four, three, weeklyg, weeklyremoval):
     if home in string:
         x = away
     else:
         x = home
     if four in string:
         y = f"{x}{oppteam}{four}"
-        #print(f"RETURNING {y} for {string}")
-        #print(tlist)
-        tlist.remove(y)
-        olist.remove(string)
         weeklyg.append({y, string})
     else:
         y = f"{x}{oppteam}{three}"
-        #print(f"RETURNING {y} for {string}")
-        tlist.remove(y)
-        olist.remove(string)
-        weeklyg.append({y, string})
+        weeklyg.append({y, string})        
+    weeklyremoval.append({mteam: y})
+    weeklyremoval.append({oppteam: string})
+    z = {oppteam: string}
+    zz = {mteam: y}
+    return y, string
 
     
 def FindAllOpponents(team, teamlist):
@@ -41,17 +38,14 @@ def FindAllOpponents(team, teamlist):
     my_item3 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][2])>=1)
     my_item4 = (item['Abbrev'] for item in teamlist if item['ScheduleList'].count(team['SelfList'][3])>=1)
     y = list(chain(my_item1, my_item2, my_item3, my_item4))
+    print(f"LIST OF TEAMS TO MATCH: {y}")
     return y
 
 def PickOppTeam(t, teamlist, opponentlist, schedulelist):
     i=0
-    #print(f"Options: {opponentlist}")
-    #print(f"Sched: {schedulelist}")
     
-    while (i<=150):
+    while (i<=50):
         ot = random.choice(opponentlist)
-        print(f"OG Team: {t}")
-        print(f"Ma Team: {ot}")
         if ot in schedulelist:
             ti = schedulelist.remove(t)
             oti = schedulelist.remove(ot)
@@ -59,5 +53,3 @@ def PickOppTeam(t, teamlist, opponentlist, schedulelist):
             exit()
         else:
             i+=1
-            print(i)
-            print("Didn't Find Team")

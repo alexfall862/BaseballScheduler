@@ -46,8 +46,6 @@ def MatchupGenerator(teamlist, rot, home, away, four, three):
                     elif i==4: 
                         gameslist.append(home+iteam['Abbrev']+four)
                         gameslist.append(away+iteam['Abbrev']+three)       
-            #print(iteam['Abbrev'])
-            #print(i)
     
         #Home 3 game divional rotation (3,3)
         for iteam in teamlist:
@@ -93,5 +91,4 @@ def MatchupGenerator(teamlist, rot, home, away, four, three):
         
         team['ScheduleList'] = gameslist
         team['SelfList'] = [home+team['Abbrev']+four, away+team['Abbrev']+four, home+team['Abbrev']+three, away+team['Abbrev']+three]
-        #print(team)
     return teamlist
